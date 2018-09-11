@@ -1,0 +1,9 @@
+
+## ignore npm modules
+/node_modules
+## Ignore auto generated package-lock file
+package-lock.json
+## escape ignoring
+!.gitignore
+!.gitkeep
+coverage/

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "StoryXpress Webcam and Recorder",
+  "description": "This extension is a starting point to create a real Chrome extension",
+  "version": "1.0",
+  "permissions":["desktopCapture","storage","tabs","background","http://*/*","https://*/*"],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "StoryXpress Screen Recorder"
+  },
+  "background": {
+    "scripts": [
+      "background.js",
+      "backgroundPlayer.js",
+      "backgroundDesktopCapture.js",
+      "backgroundUserMedia.js"
+    ]
+  },
+  "content_scripts": [
+     {
+       "matches": ["<all_urls>"],
+       "js": ["content-script.js"]
+     }
+   ]
+}
